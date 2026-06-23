@@ -1,0 +1,34 @@
+# Snowflake CLI local state — never commit connection config
+.snowflake/
+*.p8
+*.pem
+*.pub
+
+
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual Environment
+.venv/
+venv/
+
+# Snowflake Build Artifacts
+# Build artifacts
+output/
+*.zip
+requirements.snowflake.txt
+
+# Environment files
+.env
+
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+definition_version: "2"
+entities:
+  clean_phone_number:
+    type: function
+    handler: functions.clean_phone_number
+    signature:
+      - name: "raw_number"
+        type: "string"
+    returns: string
+    runtime: "3.10"
+    artifacts:
+      - app/
+    stage: "@dev_deployments"
+
