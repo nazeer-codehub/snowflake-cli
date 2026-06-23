@@ -11,4 +11,16 @@ entities:
     artifacts:
       - app/
     stage: "@dev_deployments"
+    
+  extract_area_code:
+    type: function
+    handler: functions.extract_area_code
+    signature:
+      - name: "phone"
+        type: "string"
+    returns: string
+    runtime: "3.10"
+    artifacts:
+      - app/
+    stage: "@dev_deployments"
 
