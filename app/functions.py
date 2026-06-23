@@ -54,3 +54,22 @@ def extract_area_code(phone):
         return match.group(1)
 
     return None
+    
+    
+    
+def mask_phone_number(phone):
+    """
+    Convert:
+    +14155551234 -> XXX-XXX-1234
+    4155551234   -> XXX-XXX-1234
+    """
+
+    if phone is None:
+        return None
+
+    digits = re.sub(r"\D", "", str(phone))
+
+    if len(digits) < 4:
+        return "INVALID"
+
+    return f"XXX-XXX-{digits[-4:]}"
